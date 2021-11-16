@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Face Filter</title>
+  </head>
+  <style>
+     :root {
+  --background-gradient: linear-gradient(30deg, #f39c12 100%, #f1c40f);
+  --gray: #34495e;
+  --darkgray: #2c3e50;
+}
+option{
+    font-family: cursive;
+}
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  font-size: 50px;
+  font-family: cursive;
+  display: block;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+/* Other styles*/
+body {
+  color: #fff;
+  background: var(--background-gradient);
+}
+h1 {
+  margin: 0 0 0.25em;
+}
+a {
+  font-weight: bold;
+  color: var(--gray);
+  text-decoration: none;
+  padding: .25em;
+  border-radius: .25em;
+  background: white;
+}
+
+  </style>
+  <body>
+    <img src= "https://res.cloudinary.com/envgame/image/upload/v1637054412/489969_1_bzmnc6.png" style="width: 100px;"/>
+    <img src= "https://res.cloudinary.com/envgame/image/upload/v1637054514/315274_1_ncderg.png" style="width: 100px;"/>
+    <img src= "https://res.cloudinary.com/envgame/image/upload/v1637054412/489969_1_bzmnc6.png" style="width: 100px;"/>
+    <br/>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clmtrackr@1.1.2/build/clmtrackr.min.js"></script>
+    <script src="/ai.js"></script>
+    
+  </body>
+</html>
